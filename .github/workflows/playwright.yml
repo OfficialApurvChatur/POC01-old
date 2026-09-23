@@ -11,7 +11,7 @@ jobs:
     env: 
       NODE_ENV: ${{ secrets.NODE_ENV || 'testing' }}
       NODE_MACHINE: ${{ secrets.NODE_MACHINE || 'live' }}
-      NODE_PORT: ${{ secrets.NODE_PORT || '8001' }}
+      NODE_PORT: ${{ secrets.NODE_PORT || '8002' }}
       NODE_APP_NAME: ${{ secrets.NODE_APP_NAME || 'POC01-ReactNodeSetup (test)' }}
       BACKEND_URL: ${{ secrets.BACKEND_URL || 'https://react-node-v01-backend-test.onrender.com' }}
       FRONTEND_URL: ${{ secrets.FRONTEND_URL || 'https://react-node-v01-frontend-test.netlify.app' }}
