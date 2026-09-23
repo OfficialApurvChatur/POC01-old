@@ -26,3 +26,78 @@
     prod -->> develop : merge
     develop -->> Developer : pull
 ```
+
+### 02.02. Project Overview LLD
+```mermaid
+  flowchart LR
+    User(("User"))
+    subgraph Testing["Testing"]
+      subgraph Frontend["Frontend"]
+        React["React"]
+      end
+      subgraph Backend["Backend"]
+        Node["Node"]
+      end
+    end
+    
+    User --> Frontend
+    Frontend --> Backend
+```
+
+### 02.03. Playwright Connection LLD
+```mermaid
+  flowchart
+    Developer(("Developer"))
+    Tester(("Tester"))
+    Github["Github Actions"]
+    CLI["Command Line Interface"]
+    subgraph Testing["Testing"]
+      Playwright[""Playwright]
+    end
+    Frontend["Frontend"]
+    Backend["Backend"]
+
+    Developer --> CLI
+    Tester --> Github
+    
+    CLI --> Testing
+    Github --> Testing
+
+    Testing --> Frontend
+    Testing --> Backend
+
+```
+
+## Servers & DNS
+
+### Backend
+- Development
+  - Local: [http://localhost:8000](http://localhost:8000)
+  - Live: []()
+- Testing
+  - Local: [http://localhost:8000](http://localhost:8000)
+  - Live: []()
+- Staging
+  - Local: [http://localhost:8000](http://localhost:8000)
+  - Live: []()
+- Production
+  - Local: [http://localhost:8000](http://localhost:8000)
+  - Live: []()
+
+### Frontend
+- Development
+  - Local: []()
+  - Live: []()
+- Testing
+  - Local: []()
+  - Live: []()
+- Staging
+  - Local: []()
+  - Live: []()
+- Production
+  - Local: []()
+  - Live: []()
+
+### Testing
+- Local Report: [http://localhost:9323](http://localhost:9323)
+- Live Report: []()
