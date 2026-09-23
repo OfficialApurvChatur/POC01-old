@@ -1,8 +1,8 @@
 import { test, expect } from "@playwright/test";
-// import { getEnv } from "../src/aConnection/EnvironmentConnection";
+import { getEnv } from "../src/aConnection/EnvironmentConnection";
 
 
-const FRONTEND_URL = "http://localhost:5173/" // getEnv.FRONTEND_URL
+const FRONTEND_URL = getEnv.FRONTEND_URL
   
 test.describe("React Connection", () => {
 

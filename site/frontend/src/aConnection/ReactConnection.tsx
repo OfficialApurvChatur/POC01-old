@@ -1,9 +1,15 @@
 import React from "react";
+import { getEnv } from "./EnvironmentConnection";
 
+
+const ENV = getEnv.ENV;
+const MACHINE = getEnv.MACHINE;
+const PORT = getEnv.PORT;
+const APP_NAME = getEnv.APP_NAME;
 
 const ReactConnection = () => {
   // Render check
-  console.log("ReactConnection");
+  console.log("React connection created successfully...");
   
   // JSX
   return (
@@ -14,10 +20,10 @@ const ReactConnection = () => {
         <h1>React Connection</h1>
         <p>React connection created successfully...</p>
         <ul>
-          <li>Environment: </li>
-          <li>Machine: </li>
-          <li>PORT: </li>
-          <li>App Name: </li>
+          <li>Environment: {ENV}</li>
+          <li>Machine: {MACHINE}</li>
+          <li>PORT: {PORT}</li>
+          <li>App Name: {APP_NAME}</li>
         </ul>
       </div>
 

@@ -1,9 +1,15 @@
+import "./aConnection/EnvironmentConnection.js"
+import { getEnv } from "./aConnection/EnvironmentConnection.js";
+
 import http from "http";
 import fs from "fs/promises";
 import path from "path";
 
 
-const PORT = process.env.PORT || 8000;
+const ENV = getEnv.ENV;
+const MACHINE = getEnv.MACHINE;
+const PORT = getEnv.PORT;
+const APP_NAME = getEnv.APP_NAME;
 
 const init = () => {
   // Create node connection
@@ -20,13 +26,19 @@ const init = () => {
           "utf-8"
         )
 
+        const updatedHTML = indexHTML
+          .replace("{{ NODE_ENV }}", ENV)
+          .replace("{{ NODE_MACHINE }}", MACHINE)
+          .replace("{{ PORT }}", String(PORT))
+          .replace("{{ NODE_APP_NAME }}", APP_NAME)
+
         // Response - write head
         response.writeHead(200, {
           "content-type": "text/html",
         });
 
         // Response - end
-        response.end(indexHTML);
+        response.end(updatedHTML);
         break;
 
       // For backend.png
@@ -61,7 +73,12 @@ const init = () => {
 
   // Listen node connection
   nodeConnection.listen(PORT, () => {
-    console.log(`Node connection is litenning on http://localhost:${PORT}`)
+    console.log(`Node connection is listening on http://localhost:${PORT}`);
+      console.log(`
+        url: http://localhost:${PORT}
+        PORT: ${PORT}
+        APP_NAME: ${APP_NAME}
+      `);
   })
 
 }
