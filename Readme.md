@@ -102,30 +102,30 @@
 
 ### Backend
 - Development
-  - Local: [http://localhost:8000](http://localhost:8000)
+  - Local: [http://localhost:8001](http://localhost:8001)
   - Live: []()
 - Testing
-  - Local: [http://localhost:8000](http://localhost:8000)
+  - Local: [http://localhost:8002](http://localhost:8000)
   - Live: []()
 - Staging
-  - Local: [http://localhost:8000](http://localhost:8000)
+  - Local: [http://localhost:8003](http://localhost:8000)
   - Live: []()
 - Production
-  - Local: [http://localhost:8000](http://localhost:8000)
+  - Local: [http://localhost:8004](http://localhost:8000)
   - Live: []()
 
 ### Frontend
 - Development
-  - Local: [http://localhost:5173](http://localhost:5173)
+  - Local: [http://localhost:3001](http://localhost:3001)
   - Live: []()
 - Testing
-  - Local: [http://localhost:5173](http://localhost:5173)
+  - Local: [http://localhost:3002](http://localhost:3002)
   - Live: []()
 - Staging
-  - Local: [http://localhost:5173](http://localhost:5173)
+  - Local: [http://localhost:3003](http://localhost:3003)
   - Live: []()
 - Production
-  - Local: [http://localhost:5173](http://localhost:5173)
+  - Local: [http://localhost:3004](http://localhost:3004)
   - Live: []()
 
 ### Testing
