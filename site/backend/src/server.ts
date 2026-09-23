@@ -46,7 +46,6 @@ const init = () => {
         // Read backend.png
         const backendPNG = await fs.readFile(
           path.join(process.cwd(), "public", "backend.png"),
-          "utf-8"
         )
 
         // Response - write head
