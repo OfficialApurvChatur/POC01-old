@@ -71,9 +71,6 @@
 ### 02.04. Environment Connection LLD
 ```mermaid
   flowchart TB
-    Developer(("Developer"))
-    Tester(("Tester"))
-    Manager(("Manager"))
     User(("User"))
     subgraph Environment["Environment"]
       develop["develop"]
@@ -88,9 +85,9 @@
       Testing["Testing"]
     end
 
-    Developer --> develop
-    Tester --> test
-    Manager --> stage
+    User --> develop
+    User --> test
+    User --> stage
     User --> prod
     develop --> Project
     test --> Project

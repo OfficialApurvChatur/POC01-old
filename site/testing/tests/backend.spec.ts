@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
 // import mongoose from "mongoose";
-// import { getEnv } from "../src/aConnection/EnvironmentConnection";
+import { getEnv } from "../src/aConnection/EnvironmentConnection";
 
 
-const BACKEND_URL = "http://localhost:8000" // getEnv.BACKEND_URL;
+const BACKEND_URL = getEnv.BACKEND_URL;
 // const MONGODB_URL = getEnv.MONGODB_URL;
 // const APP_NAME = getEnv.APP_NAME;
 
