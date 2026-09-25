@@ -59,10 +59,10 @@ const init = () => {
 
       // For health
         // Response - write head
-        res.writeHead(200);
+        response.writeHead(200);
         
         // Response - end
-        res.end();
+        response.end();
 
         return;
       }
