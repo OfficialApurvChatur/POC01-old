@@ -39,7 +39,7 @@ const init = () => {
 
         // Response - end
         response.end(updatedHTML);
-        break;
+        return;
 
       // For backend.png
       case "/backend.png":
@@ -55,7 +55,17 @@ const init = () => {
 
         // Response - end
         response.end(backendPNG);
-        break;
+        return;
+
+      // For health
+        // Response - write head
+        res.writeHead(200);
+        
+        // Response - end
+        res.end();
+
+        return;
+      }
 
       // For not found
       default:
@@ -66,7 +76,7 @@ const init = () => {
 
         // Response - end
         response.end("Page Not Found");
-        break;
+        return;
     }
   })
 
