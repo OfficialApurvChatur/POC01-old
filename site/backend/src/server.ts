@@ -65,7 +65,6 @@ const init = () => {
         response.end();
 
         return;
-      }
 
       // For not found
       default:
